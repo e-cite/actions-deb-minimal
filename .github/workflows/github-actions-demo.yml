@@ -1,7 +1,15 @@
 name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+# run-name: ${{ github.actor }} is testing out GitHub Actions 🚀  # Pipeline-Number
 on: [push]
 jobs:
+  container-test-job:
+    runs-on: ubuntu-latest
+    container:
+      image: debian:bookworm
+    steps:
+      - run: ls -la
+      - run: apt update
+      - run: apt install build-essential devscripts debhelper
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
