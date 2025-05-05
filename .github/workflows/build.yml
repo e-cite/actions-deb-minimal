@@ -10,8 +10,6 @@ jobs:
       - run: apt-get install -yq build-essential devscripts
       - uses: actions/checkout@v4
       - run: ls -la
-      - run: yes | mk-build-deps -i || true
-      - run: ls -la
-      - run: debuild -us -uc
+      - run: dpkg-buildpackage -uc -us -b
       - run: ls -la ../ ./
 
