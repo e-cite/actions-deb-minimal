@@ -1,0 +1,14 @@
+name: Debian Packaging Intro
+on: [push]
+jobs:
+  debuild:
+    runs-on: ubuntu-latest
+    container:
+      image: debian:bookworm
+    steps:
+      - run: apt-get update
+      - run: apt-get install -yq build-essential devscripts
+      - run: ls -la
+      - run: debuild -us -uc
+      - run: ls -la ../ ./
+
