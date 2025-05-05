@@ -16,9 +16,9 @@ jobs:
       - name: Build the DEB binary package
         run: dpkg-buildpackage -uc -us -b
       - run: ls -la ../ ./
-      - run: cd ..
+      - run: pwd
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
-          path: '*.deb'
+          path: '/__w/actions-deb-minimal/actions-deb-minimal/*.deb'
           retention-days: 5
