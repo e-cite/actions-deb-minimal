@@ -1,5 +1,5 @@
-hithere (1.0-1) UNRELEASED; urgency=low
+hithere (1.0.0-1) unstable; urgency=low
 
-  * Initial release. (Closes: #XXXXXX)
+  * Initial release.
 
- -- Lars Wirzenius <liw@liw.fi>  Thu, 18 Nov 2010 17:25:32 +0000
+ -- Andreas Dolp <dev@andreas-dolp.de>  Wed, 27 May 2026 12:58:03 +0200
