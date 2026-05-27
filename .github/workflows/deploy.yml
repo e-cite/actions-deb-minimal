@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download a Build Artifact
-        uses: actions/download-artifact@v3.1.0
+        uses: actions/download-artifact
         with:
           # Artifact name
           name: Get built DEB packages
