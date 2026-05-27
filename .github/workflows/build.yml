@@ -11,14 +11,14 @@ jobs:
       - name: Install build dependencies
         run: apt-get install -yq build-essential devscripts
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6.0.2
       - run: ls -la
       - name: Build the DEB binary package
         run: dpkg-buildpackage -uc -us -b
       - run: ls -la ../ ./
       - run: ls -la /__w/actions-deb-minimal/ /__w/actions-deb-minimal/actions-deb-minimal
       - name: Upload artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7.0.1
         with:
           path: '/__w/actions-deb-minimal/*.deb'
           retention-days: 5
