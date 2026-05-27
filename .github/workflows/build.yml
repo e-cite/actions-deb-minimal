@@ -20,7 +20,8 @@ jobs:
       - run: ls -la ../ ./
       - run: ls -la /__w/actions-deb-minimal/ /__w/actions-deb-minimal/actions-deb-minimal
       - name: Upload artifacts
-        uses: actions/upload-artifact@v7.0.1
+        uses: actions/upload-artifact@v7
         with:
+          name: my-deb
           path: '/__w/actions-deb-minimal/*.deb'
           retention-days: 5
