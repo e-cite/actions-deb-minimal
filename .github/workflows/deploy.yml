@@ -31,8 +31,6 @@ jobs:
     steps:
       - name: Download a Build Artifact
         uses: actions/download-artifact@v8
-        with:
-          name: my-deb
       - run: ls -la
       - name: Setup Pages
         uses: actions/configure-pages@v5
