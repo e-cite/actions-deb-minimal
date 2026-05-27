@@ -30,12 +30,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download a Build Artifact
-        uses: actions/download-artifact@v8.0.1
+        uses: actions/download-artifact@v8
         with:
-          # Artifact name
-          name: Get built DEB packages
-          # Destination path
-          path: '/__w/actions-deb-minimal/*.deb'
+          name: my-deb
       - run: ls -la
       - name: Setup Pages
         uses: actions/configure-pages@v5
